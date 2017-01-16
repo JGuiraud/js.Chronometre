@@ -15,7 +15,7 @@ function Chrono(currentTime) {
 }
 
 /* ------- Bouttons ------- */
-var Chronometre = new Chrono(0);
+var Chronometre = new Chrono(-1);
 var counter;
 $("#pause").hide();
 $("#start").click(function(){
@@ -61,7 +61,7 @@ function pause (){
 /* ------- stop ------- */
 function stop(){
     clearInterval(counter);
-    Chronometre.time = 0;
+    Chronometre.time = -1;
     $("#timer").html("00:00:00");
 }
 
