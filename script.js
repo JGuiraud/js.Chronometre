@@ -41,15 +41,15 @@ function timer(){
     var hour = Math.floor(Chronometre.time /3600);
     var minute = Math.floor((Chronometre.time - hour*3600)/60);
     var seconds = Chronometre.time - (hour*3600 + minute*60);
-        // if (seconds<10) {
-        //     seconds = "0" + seconds;
-        // }
-        // if (minute<10) {
-        //     minute = "0" + minute;
-        // }
-        // if (hour<10) {
-        //     hour = "0" + hour;
-        // }
+        if (seconds<10) {
+            seconds = "0" + seconds;
+        }
+        if (minute<10) {
+            minute = "0" + minute;
+        }
+        if (hour<10) {
+            hour = "0" + hour;
+        }
     $("#timer").html(hour + ":" + minute + ":" + seconds);  
 }
 
